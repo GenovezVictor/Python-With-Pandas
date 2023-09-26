@@ -1,0 +1,16 @@
+Using pandas, from the list below:
+
+stocks = ['PLW', 'CDR', '11B', 'TEN']
+
+create a Series object and print it to the console
+
+
+answer:
+
+import pandas as pd
+
+stocks = ['PLW', 'CDR', '11B', 'TEN']
+
+series = pd.Series(stocks)
+print(series)
+
