@@ -1,0 +1,21 @@
+The following Series is given:
+
+
+
+series = pd.Series(['001', '002', '003', '004'], list('abcd'))
+
+
+Convert its type to int and print this Series to the console.
+
+Solution:
+
+import pandas as pd
+
+# Série original
+series = pd.Series(['001', '002', '003', '004'], list('abcd'))
+
+# Convertendo os valores da série para int
+series = series.astype(int)
+
+# Imprimindo a série no console
+print(series)
