@@ -1,0 +1,25 @@
+The following Series is given (quotations variable):
+
+
+
+PLW    387.0
+CDR    339.5
+TEN    349.5
+11B    391.0
+dtype: float64
+
+
+Convert the quotations to the DataFrame and set the column name to 'price'. In response, print this DataFrame to the console.
+
+Solution:
+
+import pandas as pd
+
+# Supondo que você já tenha a Series quotations definida
+quotations = pd.Series({'PLW': 387.0, 'CDR': 339.5, 'TEN': 349.5, '11B': 391.0})
+
+# Converter a Series em um DataFrame com uma coluna chamada 'price'
+quotations_df = pd.DataFrame({'price': quotations})
+
+# Imprimir o DataFrame no console
+print(quotations_df)
