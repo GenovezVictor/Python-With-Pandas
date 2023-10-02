@@ -1,0 +1,9 @@
+Create the DatetimeIndex object containing the dates in the yyyy-mm-dd format for all Mondays from 2020 and assign it to the date_range variable. Print this variable to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+date_range = pd.date_range(start='2020-01-01', periods=52, freq='W-MON')
+print(date_range)
