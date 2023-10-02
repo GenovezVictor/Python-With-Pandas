@@ -1,0 +1,11 @@
+Create the DatetimeIndex object containing the yyyy-mm-dd format dates for all days from January 2020 and assign it to the date_range variable. In response, print this variable to the console.
+
+import pandas as pd
+
+Solution:
+
+# Criando o DatetimeIndex para todos os dias de janeiro de 2020
+date_range = pd.date_range(start='2020-01-01', end='2020-01-31')
+
+# Imprimindo a variável date_range no console
+print(date_range)
