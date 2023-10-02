@@ -1,0 +1,14 @@
+Create the DatetimeIndex object containing the dates in the format yyyy-mm-dd hh: mm: ss for January 1, 2021 with a time interval of 1h and assign to the variable date_range. In response, print this variable to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+date_range = pd.date_range(
+    start='2021-01-01', 
+    end='2021-01-02', 
+    freq='H', 
+    closed='left'
+)
+print(date_range)
