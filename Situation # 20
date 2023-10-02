@@ -1,0 +1,9 @@
+The 'dataframe50.csv' file is attached to this exercise. Load this file into the df_new variable (remember to load the index correctly) and print the df_new variable to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+df_new = pd.read_csv('dataframe50.csv', index_col=0)
+print(df_new)
