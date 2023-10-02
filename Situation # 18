@@ -1,0 +1,41 @@
+The following df DataFrame is given:
+
+
+
+              normal   uniform  binomial
+2020-01-01  0.496714  0.167483         0
+2020-01-02 -0.138264  0.104568         0
+2020-01-03  0.647689  0.636430         0
+2020-01-04  1.523030  0.706476         0
+2020-01-05 -0.234153  0.031586         1
+...              ...       ...       ...
+2022-09-22 -0.281100  0.280683         1
+2022-09-23  1.797687  0.206993         0
+2022-09-24  0.640843  0.516573         0
+2022-09-25 -0.571179  0.005506         1
+2022-09-26  0.572583  0.007664         0
+ 
+[1000 rows x 3 columns]
+
+
+Find the distribution of the binomial column from this DataFrame. In response, print this distribution to the console as shown below.
+
+
+Solução:
+
+import numpy as np
+import pandas as pd
+ 
+ 
+np.random.seed(42)
+data_dict = {
+    'normal': np.random.normal(loc=0, scale=1, size=1000),
+    'uniform': np.random.uniform(low=0, high=1, size=1000),
+    'binomial': np.random.binomial(n=1, p=0.2, size=1000)
+}
+ 
+df = pd.DataFrame(
+    data=data_dict, 
+    index=pd.date_range('2020-01-01', periods=1000)
+)
+print(df['binomial'].value_counts())
