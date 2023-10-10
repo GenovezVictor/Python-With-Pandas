@@ -1,0 +1,13 @@
+The google.csv file is loaded using pandas as shown below. Find the index for which the Close price has the lowest value and assign it to the idx_min variable.
+
+Then extract the row for this index from the google DataFrame as a DataFrame. In response, print this DataFrame to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv', index_col=0)
+google = google.reset_index()
+idx_min = google['Close'].argmin()
+print(google.iloc[[idx_min]])
