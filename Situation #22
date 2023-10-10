@@ -1,0 +1,11 @@
+The google.csv file is loaded using pandas as shown below. Print basic information about google DataFrame, then print blank line and print basic statistics for this DataFrame.
+
+Solution
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv')
+print(google.info())
+print()
+print(google.describe())
