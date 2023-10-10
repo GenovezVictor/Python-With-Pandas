@@ -1,0 +1,19 @@
+The google.csv file is loaded using pandas as shown below. Assign two new columns to the google DataFrame:
+
+column with the current month number named 'Month'
+
+column with the current year named 'Year'
+
+In response, print this DataFrame to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv', index_col=0)
+google = google.reset_index()
+google['Date'] = pd.to_datetime(google['Date'])
+google['Year'] = google['Date'].dt.year
+google['Month'] = google['Date'].dt.month
+print(google)
