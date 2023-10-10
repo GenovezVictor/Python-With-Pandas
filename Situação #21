@@ -1,0 +1,14 @@
+The google.csv file is attached to this exercise. Load this file into DataFrame using pandas and assign it to the google variable. In response, print google variable to the console.
+
+Solução:
+
+import pandas as pd
+
+# Substitua 'caminho/do/arquivo/google.csv' pelo caminho real do arquivo, se necessário
+caminho_do_arquivo = 'google.csv'
+
+# Carregue o arquivo CSV em um DataFrame
+google = pd.read_csv(caminho_do_arquivo)
+
+# Imprima o DataFrame
+print(google)
