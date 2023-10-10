@@ -1,0 +1,12 @@
+The google.csv file is loaded using pandas as shown below. Convert index to the column 'Date' as shown below. Assign changes to the google variable.
+In response, print result to the console.
+
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv', index_col=0)
+google = google.reset_index()
+print(google)
