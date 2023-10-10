@@ -1,0 +1,21 @@
+The google.csv file is loaded using pandas as shown below. Extract the following columns:
+
+Date
+
+Open
+
+Close
+
+Volume
+
+from the google DataFrame. In response, print result to the console.
+
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv', index_col=0)
+google = google.reset_index()
+print(google[['Date', 'Open', 'Close', 'Volume']])
