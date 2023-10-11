@@ -1,0 +1,22 @@
+The google.csv file is loaded using pandas as shown below. Change the following column names:
+
+Open -> O
+
+High -> H
+
+Low -> L
+
+Close -> C
+
+Volume -> V
+
+In response, print google DataFrame to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv', index_col=0)
+google.columns = ['O', 'H', 'L', 'C', 'V']
+print(google)
