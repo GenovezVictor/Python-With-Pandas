@@ -1,0 +1,10 @@
+The google.csv file is loaded using pandas as shown below. Set the index for the Date column and print this DataFrame to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv')
+google = google.set_index('Date')
+print(google)
