@@ -1,0 +1,14 @@
+The google.csv file is loaded using pandas as shown below. Remove the Year and Month columns from the google DataFrame.
+In response, print google DataFrame to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+google = pd.read_csv('google.csv')
+google['Date'] = pd.to_datetime(google['Date'])
+google['Year'] = google['Date'].dt.year
+google['Month'] = google['Date'].dt.month
+google = google.drop(columns=['Year', 'Month'])
+print(google)
