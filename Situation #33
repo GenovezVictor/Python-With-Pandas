@@ -1,0 +1,22 @@
+The df DataFrame is given below. Please note the TotalCharges column. 
+The type of this column is set to object. Try to guess why this happened.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+url = ('https://ml-repository-krakers.s3-eu-west-1.amazonaws.com/'
+    'kaggle+/churn_modelling/Telco-Customer-Churn.csv')
+df = pd.read_csv(url)
+ 
+# Calculation of the median for the TotalCharges column
+median = df['TotalCharges'][df['TotalCharges'] != ' '].median()
+ 
+# Fill the missing values with median
+df.loc[df['TotalCharges'] == ' ', 'TotalCharges'] = median
+ 
+# Convert TotalCharges column to float type
+df['TotalCharges'] = df['TotalCharges'].astype('float')
+ 
+print(df['TotalCharges'].value_counts())
