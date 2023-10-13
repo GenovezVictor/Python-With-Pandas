@@ -1,0 +1,11 @@
+The df DataFrame is given below. Group this DataFrame by 'Churn' and 'PaymentMethod' column and calculate the average value of the 'MonthlyCharges' column.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+url = ('https://ml-repository-krakers.s3-eu-west-1.amazonaws.com/'
+    'kaggle+/churn_modelling/Telco-Customer-Churn.csv')
+df = pd.read_csv(url, index_col=0)
+print(df.groupby(['Churn', 'PaymentMethod'])['MonthlyCharges'].mean())
