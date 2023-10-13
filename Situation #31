@@ -1,0 +1,15 @@
+The following url is given:
+
+https://ml-repository-krakers.s3-eu-west-1.amazonaws.com/kaggle+/churn_modelling/Telco-Customer-Churn.csv
+
+Using pandas load this file into DataFrame and assign to the df variable. In response, print the first five rows to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+url = ('https://ml-repository-krakers.s3-eu-west-1.amazonaws.com/'
+    'kaggle+/churn_modelling/Telco-Customer-Churn.csv')
+df = pd.read_csv(url)
+print(df.head())
