@@ -1,0 +1,12 @@
+The df DataFrame is given below. Calculate the number of missing values for each variable. In response, print result to the console.
+
+Solution:
+
+import pandas as pd
+ 
+ 
+url = ('https://ml-repository-krakers.s3-eu-west-1.amazonaws.com/'
+    'kaggle+/churn_modelling/Telco-Customer-Churn.csv')
+df = pd.read_csv(url)
+print(df.isnull().sum())
+
