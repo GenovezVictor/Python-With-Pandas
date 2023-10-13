@@ -1,0 +1,14 @@
+The df DataFrame is given below. Take a sample of ten rows from this DataFrame and save to sample_10.csv file.
+
+Solution:
+
+import pandas as pd
+import numpy as np
+ 
+ 
+np.random.seed(42)
+ 
+url = ('https://ml-repository-krakers.s3-eu-west-1.amazonaws.com/'
+    'kaggle+/churn_modelling/Telco-Customer-Churn.csv')
+df = pd.read_csv(url, index_col=0)
+df.sample(10).to_csv('sample_10.csv')
