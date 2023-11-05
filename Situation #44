@@ -1,0 +1,19 @@
+The df DataFrame is given below. Assign a new column 'col4', which will truncate the values from the column col2 to the range [−1.0, 1.0]. In other words, for values less than -1.0 set -1.0 and for values greater than 1.0 set 1.0.
+
+In response, print DataFrame to the console.
+
+Solution:
+
+import numpy as np
+import pandas as pd
+ 
+ 
+np.random.seed(42)
+s1 = pd.Series(np.random.rand(20))
+s2 = pd.Series(np.random.randn(20))
+ 
+df = pd.concat([s1, s2], axis=1)
+df.columns = ['col1', 'col2']
+df['col3'] = df['col2'].map(lambda x: 1 if x >= 0 else -1)
+df['col4'] = df['col2'].clip(-1.0, 1.0)
+print(df)
