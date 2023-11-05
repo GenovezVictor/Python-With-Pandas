@@ -1,0 +1,31 @@
+The df DataFrame is given below. Extract rows from this DataFrame for which the col2 column is between 0.0 and 1.0 (inclusive).
+
+In response, print result to the console.
+
+
+
+Expected result:
+
+
+
+        col1      col2
+1   0.950714  0.314247
+6   0.058084  0.067528
+9   0.708073  0.110923
+11  0.969910  0.375698
+18  0.431945  0.822545
+
+
+Solution
+
+import numpy as np
+import pandas as pd
+ 
+ 
+np.random.seed(42)
+s1 = pd.Series(np.random.rand(20))
+s2 = pd.Series(np.random.randn(20))
+ 
+df = pd.concat([s1, s2], axis=1)
+df.columns = ['col1', 'col2']
+print(df[df['col2'].between(0.0, 1.0)])
